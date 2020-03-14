@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-03-13T19:29:10 PDT" name="BDD Test Suite" finished-at="2020-03-13T19:29:30 PDT" duration-ms="20882">
+    <groups>
+      <group name="cucumber">
+        <method signature="RunCucumberTest.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.example.stepdefs.RunCucumberTest@5656be13]" name="feature" class="org.example.stepdefs.RunCucumberTest"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2020-03-13T19:29:10 PDT" name="Center search" finished-at="2020-03-13T19:29:30 PDT" duration-ms="20882">
+      <class name="org.example.stepdefs.RunCucumberTest">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:org.example.stepdefs.RunCucumberTest@5656be13]" started-at="2020-03-13T19:29:10 PDT" name="setUpClass" finished-at="2020-03-13T19:29:10 PDT" duration-ms="950" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:org.example.stepdefs.RunCucumberTest@5656be13]" started-at="2020-03-13T19:29:11 PDT" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-03-13T19:29:30 PDT" duration-ms="19075" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Center Search]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.stepdefs.RunCucumberTest@5656be13]" started-at="2020-03-13T19:29:30 PDT" name="tearDownClass" finished-at="2020-03-13T19:29:30 PDT" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- org.example.stepdefs.RunCucumberTest -->
+    </test> <!-- Center search -->
+  </suite> <!-- BDD Test Suite -->
+</testng-results>

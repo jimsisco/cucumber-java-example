@@ -39,8 +39,11 @@ public class StepDefinitions {
 
     @When("^Title is \"([^\"]*)\"$")
     public void title_is(String arg1) {
-        String actual = driver.getTitle();
-        assertEquals(actual, arg1);
+        String actual1 = driver.getTitle();
+        assertEquals(actual1, arg1);
+        WebElement button =  driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/button"));
+        button.click();
+
     }
 
     @Then("^I click  Find My Center$")
@@ -51,9 +54,9 @@ public class StepDefinitions {
 
     @Then("^It should have taken me to Center Search Results | KinderCare$")
     public void it_should_take_me_to_cs() {
-        String actual = driver.getTitle();
+        String actual2 = driver.getTitle();
         String test = "Center Search Results | KinderCare";
-        assertEquals(actual, test);
+        assertEquals(actual2, test);
     }
 
     @Then("^I enter my zip code \"([^\"]*)\"$")
@@ -64,26 +67,22 @@ public class StepDefinitions {
 
     @Then("^I click Search Again$")
     public void and_click_Search_Again() {
-        WebElement button = driver.findElement(By.xpath("//main[@id=\'main\']/div[2]/aside/div[2]/form/fieldset[4]/button"));
+        WebElement button = driver.findElement(By.xpath("/html/body/main/div[2]/aside/div[2]/form/fieldset[4]/button"));
         button.click();
     }
 
     @Then("^I can see the center and click Tuition and Openings$")
     public void i_can_see_the_center_and_click_Tuition_and_Openings() {
-        WebElement button = driver.findElement(By.className("//div[@class=\"center-result-item__name\"}//itemprop[@name=\"Powell KinderCare\"]"));
-        button.click();   //h2[@class="center-result-item__name"}//itemprop[@name="Powell KinderCare"]
+        WebElement button = driver.findElement(By.xpath("//li[@id='300902']/div/div[2]/a"));
+        button.click();
     }
-    //class="center-result-item__name"
-        //html/body/main/div[2]/article/ol/li[1]/div/a/h2
-         //    <h2 class="center-result-item__name" itemprop="name">Powell KinderCare</h2>
-    //*[@id="300902"]
 
     @Then("^I can see \"([^\"]*)\"$")
     public void i_can_see(String arg1) {
         String actual = driver.getTitle();
+        //String test = "Center Search Results | KinderCare";
         assertEquals(actual, arg1);
     }
-
 
     @After
     public void closeBrowser() {
